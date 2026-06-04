@@ -1,0 +1,15 @@
+{
+    "ROS2.distro": "jazzy",
+    "python.autoComplete.extraPaths": [
+        "/home/shepard/drone_ws/install/px4_ros_com/lib/python3.12/site-packages",
+        "/home/shepard/drone_ws/install/drone_mission/lib/python3.12/site-packages",
+        "/home/shepard/drone_ws/install/px4_msgs/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/shepard/drone_ws/install/px4_ros_com/lib/python3.12/site-packages",
+        "/home/shepard/drone_ws/install/drone_mission/lib/python3.12/site-packages",
+        "/home/shepard/drone_ws/install/px4_msgs/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
+}
