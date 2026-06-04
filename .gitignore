@@ -1,0 +1,144 @@
+# =============================================================================
+# ROS2 - yahboom_rosmaster .gitignore
+# =============================================================================
+
+# ROS2 build artifacts
+build/
+install/
+log/
+.ros/
+
+# ROS2 logs & bag files
+*.bag
+*.db3
+*.mcap
+*.ros
+ros_log/
+~/.ros/log/
+
+# Xacro / URDF generated files
+*.urdf.generated
+*.urdf.bak
+
+# =============================================================================
+# C++ / CMake
+# =============================================================================
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+Makefile
+*.cmake
+!*Config.cmake
+!*ConfigVersion.cmake
+*.a
+*.so
+*.so.*
+*.dll
+*.dylib
+*.o
+*.obj
+*.elf
+
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg
+*.egg-info/
+dist/
+*.pyo
+.eggs/
+.pytest_cache/
+htmlcov/
+.coverage
+.tox/
+venv/
+.venv/
+env/
+
+# =============================================================================
+# IDE & Editor
+# =============================================================================
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# CLion / JetBrains
+.idea/
+*.iml
+cmake-build-*/
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+.#*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# =============================================================================
+# OS
+# =============================================================================
+
+# Linux
+.directory
+.Trash-*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# =============================================================================
+# Simulation
+# =============================================================================
+
+# Gazebo
+.gazebo/
+*.world.bak
+gzserver_material_scripts.log
+
+# =============================================================================
+# Hardware / Credentials
+# =============================================================================
+
+*.env
+.env.*
+config/secrets.yaml
+config/credentials.yaml
+**/wifi_config.*
+**/ssh_keys/
+
+# =============================================================================
+# Misc
+# =============================================================================
+*.tmp
+*.temp
+*.bak
+*.orig
+*.patch
+*.diff
+*.out
+*.log
+.cache/
+*.vc.db
+*.vc.db-*
