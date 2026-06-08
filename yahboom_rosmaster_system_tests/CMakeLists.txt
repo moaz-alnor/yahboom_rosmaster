@@ -11,11 +11,24 @@ find_package(rclcpp REQUIRED)
 find_package(rclcpp_action REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(rcl_interfaces REQUIRED)
+
+# Copy the necessary files to designated locations in the project 
+install (
+  DIRECTORY config launch
+  DESTINATION share/${PROJECT_NAME}
+)
 
 # Add the square mecanum controller executable
 add_executable(square_mecanum_controller
   src/square_mecanum_controller.cpp
 )
+
+# Add the square mecanum parameters executable
+add_executable(mecanum_parameters_node
+  src/mecanum_parameters_node.cpp
+)
+
 # Specify dependencies for the target
 ament_target_dependencies(square_mecanum_controller
   rclcpp
@@ -23,8 +36,19 @@ ament_target_dependencies(square_mecanum_controller
   std_msgs
 )
 
+# Specify dependencies for the mecanum parameters node 
+ament_target_dependencies(mecanum_parameters_node
+  rclcpp
+  geometry_msgs
+  std_msgs  
+  rcl_interfaces
+)
+
+
+
 install(TARGETS
   square_mecanum_controller
+  mecanum_parameters_node
   DESTINATION lib/${PROJECT_NAME}
 )
 if(BUILD_TESTING)
