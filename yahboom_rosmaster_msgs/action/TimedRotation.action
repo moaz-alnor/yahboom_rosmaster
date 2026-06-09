@@ -1,0 +1,18 @@
+# Request parameters for the timed rotation 
+float64 angular_velocity    # Desired angular velocity in radians per second( + for counterclockwise, - for clockwise rotation)
+float64 duration            # Desired duration of the rotation
+---
+# Result of the completed rotation
+bool success                # Indicates if the rotation was completed successfully 
+float64 actual_duration     # Actual duration of the rotation in seconds
+---
+# Continuous feedback during rotation
+float64 elapsed_time        # Elapsed time since the start if the rotation in seconds
+string status               # Current status of the rotation:
+                            # GOAL_RECIEVED: The action server has recieved a goal
+                            # ROTATING: The rotation is in progress
+                            # GOAL_SUCCEEDED: The rotation has been compeleted successfully
+                            # GOAL_ABORTED: The rotation has been aborted due to an error or so exception
+                            # GOAL_CANCELED: The client has canceled the rotation goal
+
+                            
